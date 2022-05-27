@@ -228,6 +228,9 @@
       font-size: 1.8rem;
       padding: 1rem;
     }
+    @media only screen and(max-width: $bp-tiny) {
+      font-size: 1.4rem;
+    }
   }
   &__stars {
     display: flex;
@@ -346,13 +349,17 @@
     margin-right: 0.7rem;
 
     // Older browsers
-    // background-image: url(../img/chevron-thin-right.svg);
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
     // newer browsers
-    background-color: var(--primary);
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover;
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: var(--primary);
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      background-image: none;
+    }
   }
 }
 ////////////////////////////////
