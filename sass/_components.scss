@@ -120,8 +120,65 @@
     margin-right: 1rem;
   }
 }
+/////////////////////////////////
+// DISPLAY CHAT MESSAGES
+.chat-trigger {
+  position: relative;
+}
+.chat-trigger:hover > .chat {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s;
+}
+.chat {
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--grey-light-1);
+  width: 17.8rem;
+  border-radius: 0 0 20px 20px;
+  z-index: 9;
+  transition: all 0.4s;
+  &__cont {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    place-items: start;
+    border-bottom: 1px solid var(--grey-light-3);
+
+    & img {
+      margin: 0;
+    }
+  }
+  &__user {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    &__sub {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+  &__photo {
+    box-sizing: content-box;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 20%;
+    border: 3px solid white;
+  }
+}
 /////////////////////
-// display settigns
+// display user settings
 .user-settings {
   position: absolute;
   top: 5.5rem;
