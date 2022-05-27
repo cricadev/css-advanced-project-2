@@ -18,13 +18,23 @@
       <header class="header">
         <img src="img/logo.png" alt="trillo logo" class="logo" />
 
-        <form action="#" class="search">
+        <form action="" class="search" method="get">
           <input
+            list="searches"
             type="text"
             class="search__input"
             placeholder="Search hotels"
           />
-          <button class="search__button">
+          <datalist id="searches">
+            <option value="Hotel Las Palmas"></option>
+            <option value="La Nube Posada"></option>
+            <option value="Hotel Merecumbé"></option>
+            <option value="Posada San Antonio"></option>
+            <option value="Hacienda del Salitre"></option>
+            <option value="Casa Pestagua"></option>
+            <option value="Isla Pelícano"></option>
+          </datalist>
+          <button type="submit" class="search__button">
             <svg class="search__icon">
               <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
             </svg>
@@ -51,6 +61,19 @@
               class="user-nav__user-photo"
             />
             <span class="user-nav__user-name">CricaDev</span>
+            <div class="user-settings">
+              <ul class="user-settings__nav">
+                <li class="user-settings__nav__item">
+                  <a href="#" class="user-settings__nav__link">Settings</a>
+                </li>
+                <li class="user-settings__nav__item">
+                  <a href="#" class="user-settings__nav__link">Profile</a>
+                </li>
+                <li class="user-settings__nav__item">
+                  <a href="#" class="user-settings__nav__link">Log out</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
