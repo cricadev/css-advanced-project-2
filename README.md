@@ -1,1 +1,3 @@
-# advanced-css-project-2
+# advanced-css-projects
+
+this repo is used to build websites with advanced css grid and flexbox and sass
